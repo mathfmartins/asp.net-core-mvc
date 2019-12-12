@@ -1,0 +1,21 @@
+@model ECommerce.Models.Customer
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <div>@ViewBag.Mensagem</div>
+
+        <form action="/customer/update/@Model.Id" method="post">
+
+            <input name="Nome" value="@Model.Name"/><br/>
+            <input name="Email" value="@Model.Email"/><br/>
+
+            <button>Salvar</button>
+
+        </form>
+
+    </body>
+</html>

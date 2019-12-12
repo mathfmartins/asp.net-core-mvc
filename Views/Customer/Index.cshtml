@@ -1,0 +1,29 @@
+@using ECommerce.Models
+@model List<Customer>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    
+    <table>
+        @foreach(var cliente in Model)
+        {
+        <tr>
+            <td>@cliente.Id</td>
+            <td>@cliente.Name</td>
+            <td>@cliente.Email</td>
+            <td>
+                <a href="/customer/delete/@cliente.Id">Apagar</a>
+                <a href="/customer/update/@cliente.Id">Editar</a>
+            </td>
+        </tr>
+        }
+    </table>
+
+    <a href="/cliente/create">Novo Cliente</a>
+
+</body>
+</html>
