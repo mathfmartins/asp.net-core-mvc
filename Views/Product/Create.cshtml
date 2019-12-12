@@ -15,8 +15,8 @@
     </div>
 
     <div class="form-group">
-        <label>Valor</label>
-        <input asp-for="Price" class="form-control" />
+        <label>Preço</label>
+        <input asp-for="Price" class="form-control" type="number" min="0" />
         <span asp-validation-for="Price"></span>
     </div>
 
@@ -29,7 +29,7 @@
             }
         </select>
         <span asp-validation-for="CategoryId" class="text-danger"></span>
-
-        <button class="btn btn-primary">Salvar</button>
+   </div>
+    <button class="btn btn-primary">Salvar</button>
 
 </form>
